@@ -15,7 +15,7 @@ It is packaged with Hazelcast 2.5.1 community edition [licenced under Apache 2 l
 
 # Features
 
-* ###HazelcastPlugin
+###HazelcastPlugin
 
 In fact this first plugin only binds an Hazelcast instance lifecycle to play application's one and exposes the Hazelcast instance : do WTFYW with it.
 It starts an instance with play and stop it with play (stopping one play instance doesn't stop the cluster)
@@ -27,7 +27,7 @@ It includes :
 
 So it only enables to start an Hazelcast instance on your own servers as well as all needed to start it on AWS.
 
-* ###HazelcastClientPlugin
+###HazelcastClientPlugin
 
 This second plugin only provides (and configure the connection of) an Hazelcast-client to handle an Hazelcast cluster through one of it's member. 
 
@@ -40,7 +40,7 @@ It includes :
 
 So it only enables your app to connect an existing Hazelcast instance
 
-* ### Used Together
+### Used Together
 
 You can use them together but they are not tied
 
@@ -97,7 +97,7 @@ choose your dependency :
 	"playHazelcast"  % "playHazelcast_2.10" % "0.1"
 and / or 
 
-	"playHazelcast"  % "playHazelcastClient_2.10" % "0.1"
+	"playHazelcastClient"  % "playHazelcastClient_2.10" % "0.1"
 
 
 In your application, add to `conf/play.plugins` (or create the file if it dosn't exist) this configuration :
@@ -138,7 +138,7 @@ Simply access the Hazelcast instance (in Scala or Java) :
 	
 and / or
 
-	HazelcastClientPlugin.getInstance();
+	HazelcastClientPlugin.getClient();
 
 # Sample
 
