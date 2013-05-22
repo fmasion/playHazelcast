@@ -102,12 +102,12 @@ and / or
 
 In your application, add to `conf/play.plugins` (or create the file if it dosn't exist) this configuration :
 
-	1500:playHazelcast.HazelcastPlugin
+	500:playHazelcast.HazelcastPlugin
 and / or
 	
-	1600:playHazelcast.HazelcastClientPlugin
+	600:playHazelcastClient.api.HazelcastClientPlugin
 
-The first number is a priority you can asjust it if you have other plugins which depend on the one
+The first number is a priority, you can adjust it if you have other plugins which depend on the one in this case when used jointly the client plugin must start after
 
 Finally in the `conf/application.conf` you can configure some element of vert.x for clustering and for the sockjs connection :
 

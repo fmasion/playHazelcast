@@ -23,9 +23,8 @@ go to your browser at the following URLs :
 you will see the cluster member list
 
 	instances : [Member [192.168.0.11]:5705, Member [192.168.0.11]:5701 this]
+	client : [Member [192.168.0.11]:5705, Member [192.168.0.11]:5701]
 	
 
 
-That's all
-
-Fred
+That's all folk's
