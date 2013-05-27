@@ -74,12 +74,6 @@ It's not a **golden Hammer** put it in your stack after prototyping and evaluati
 As usual this comes without any warranty of any kind.
 
 
-# Warnings
-
-The community Edition does not provide security on the port opened on the cluster. That not a problem if your cluster lives in a DMZ or if you make it secured by yourself.
-
-With 3 lines of code and and a hazelcastClient you can shutdown ALL the cluster if these port are accessible from the outside. So be carefull.
-
 # How to install
 
 
@@ -109,14 +103,25 @@ and / or
 
 The first number is a priority, you can adjust it if you have other plugins which depend on the one in this case when used jointly the client plugin must start after
 
-Finally in the `conf/application.conf` you can configure some element of vert.x for clustering and for the sockjs connection :
+Finally in the `conf/application.conf` you can configure some elements. Theses elements overide the default config.
+If You provide a conf file it is first used then the keys in the `application.conf` are applied to overide those defined in the conf file.
 
 	hz.port=5701
 	# hz.configfile="conf/config.xml"
 	
+	# defining group enables multiple hz instances on the same server
+	# so the same machine can participate to many cluster
+	# Also there are other product that use hazelcast internaly so it provides connection to annother cluster
+	# hz.groupname="dev"
+	# hz.grouppassword="dev-pass"
+	
+	# hazelcast tries to connect and increment ports trying to find other machine on the lan
+	# it makes easy the use of multiple server on the same machine
+	# hz.portautoincrement=true
+	
 	# No licenceKey is required for community edition
 	# hz.licenceKey="XXXXXXXXX"
-	
+		
 	# for hazelcastClient you configure a list of seeds (some of the member to contact if present)
 	# the first seed that respond enables the connection
 	# by default addMembershipListener will keep members up to date 
@@ -124,7 +129,7 @@ Finally in the `conf/application.conf` you can configure some element of vert.x 
 	hz.addresses = [127.0.0.1:5701]
 
 No licenceKey is required for community edition.
-It's just if you use enterprise edition (adds security, out of heap datastorage, non limited monitoring, C# client, )
+It's just if you use enterprise edition (adds jaas base security/credentials, out of heap datastorage, non limited monitoring, C# client, )
 
 If no config.xml file is provided the app lauches with Hazelcast defaults.
 To know how to configure hazelcast (in particulary in EC2) [RTFM](http://www.hazelcast.com/docs.jsp)

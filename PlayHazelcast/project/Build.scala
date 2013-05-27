@@ -5,7 +5,7 @@ import play.Project._
 object ApplicationBuild extends Build {
 
   val appName         = "playHazelcast"
-  val appVersion      = "0.1"
+  val appVersion      = "0.1.1"
 
   val appDependencies = Seq(
     // Add your project dependencies here,
@@ -14,8 +14,7 @@ object ApplicationBuild extends Build {
   )
 
 
-  //val main = play.Project(appName, appVersion, appDependencies).settings(
-  val main = Project(id = "playHazelcast", base = file("."), settings = Project.defaultSettings).settings(    
+  val main = play.Project(appName, appVersion, appDependencies).settings(
     // Add your own project settings here      
   )
 

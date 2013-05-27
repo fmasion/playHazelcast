@@ -27,6 +27,11 @@ class HazelcastPlugin(app: play.api.Application) extends Plugin {
       config.setLicenseKey(key)
     }
     
+    val group = app.configuration.getString("hz.groupname").getOrElse("dev")
+    val pass  = app.configuration.getString("hz.grouppassword").getOrElse("dev-pass")
+    config.getGroupConfig().setName(group).setPassword(pass)
+    
+    //configApp1.getGroupConfig().setName("app1");
     //More configuration option ? wait'n see
     
 	PlayHz.start(config)

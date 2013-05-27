@@ -5,7 +5,7 @@ import play.Project._
 object ApplicationBuild extends Build {
 
   val appName         = "playHazelcastClient"
-  val appVersion      = "0.1"
+  val appVersion      = "0.1.1"
 
   val appDependencies = Seq(
     // Add your project dependencies here,

@@ -23,6 +23,11 @@ class HazelcastClientPlugin(app: play.api.Application) extends Plugin {
   
   def getConfig:ClientConfig = {
     val config = new ClientConfig
+    
+    val group = app.configuration.getString("hz.groupname").getOrElse("dev")
+    val pass  = app.configuration.getString("hz.grouppassword").getOrElse("dev-pass")
+    config.getGroupConfig().setName(group).setPassword(pass)
+    
     val adresses = app.configuration.getStringList("hz.addresses") match {
       case Some(list) => scala.collection.JavaConversions.collectionAsScalaIterable(list).toList
       case None       => DEFAULT_HOST
@@ -31,8 +36,7 @@ class HazelcastClientPlugin(app: play.api.Application) extends Plugin {
     adresses.foreach(config.addAddress(_))
     config
   }
-  
-
+ 
 }
 
 object PlayHzClient {
