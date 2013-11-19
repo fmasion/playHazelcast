@@ -1,7 +1,7 @@
 PlayHazelcast
 =============
 
-playframework 2.1.x hazelcast integration plugin
+playframework 2.2.x hazelcast integration plugin
 
 # HazelCast 2.6.3 Plugin for Play 2.2.x
 
