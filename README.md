@@ -48,7 +48,7 @@ You can use them together but they are not tied
 
 This very basic integration is done intentionally. Hazelcast is very feature rich and it belongs to other upcomings plugins to extend Play in a particular way by using this very simple plugin if needed.
 
-Moreover this upcoming services should use the [**Hazelcast-client library**](http://mvnrepository.com/artifact/com.hazelcast/hazelcast-client/2.5.1) in order to be able to interact with any Hazelcast cluster (not only the one tied to play). 
+Moreover this upcoming services should use the [**Hazelcast-client library**](http://mvnrepository.com/artifact/com.hazelcast/hazelcast-client/2.6.3) in order to be able to interact with any Hazelcast cluster (not only the one tied to play). 
 
 Imagine you want to write an open source monitoring tool for Hazelcast with play framework* It would be nice to monitor any Hazelcast cluster not only the one your app creates 
 
@@ -61,7 +61,7 @@ Consider using this plugin for :
 * **simple cluster management** (make your play app cluster aware)
 * **share and sync data between all machines in your cluster** (in a replicated, fail-safe and **observable** way)
 * **cluster based scheduler** (coming soon stay tuned...)
-* cluster wide cache replacement for ehcache ([memcached interface](http://www.hazelcast.com/docs/2.5/manual/multi_html/ch15s02.html))
+* cluster wide cache replacement for ehcache ([memcached interface](http://www.hazelcast.com/docs/2.5/manual/multi_html/ch15s02.html)) or using **[playHazelCache plugin](https://github.com/fmasion/playHazelCache)**
 * distributed ORM 2nd level cache ([could fit especially well with hibernate](http://www.hazelcast.com/docs/2.5/manual/multi_html/ch13.html))
 * in memory [grid computation](http://www.hazelcast.com/docs/2.5/manual/multi_html/ch09.html) (making wrappers on executors to enable a cluster wide monadic way to express fuctionnal operation…would be cool)
 * easy cluster wide [pub/sub](http://www.hazelcast.com/docs/2.5/manual/multi_html/ch02s02.html) (despite there's some nice tools already in play)
