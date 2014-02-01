@@ -3,14 +3,14 @@ PlayHazelcast
 
 playframework 2.2.x hazelcast integration plugin
 
-# HazelCast 2.6.3 Plugin for Play 2.2.x
+# HazelCast 2.6.6 Plugin for Play 2.2.x
 
 This is a set **of 2 plugins** that provide basic [Hazelcast](http://http://www.hazelcast.com/)  integration in Play!.
 
 * **HazelcastPlugin**
 * **HazelcastClientPlugin**
 
-It is packaged with Hazelcast 2.6.3 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
+It is packaged with Hazelcast 2.6.6 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
 
 
 # Features
@@ -48,12 +48,12 @@ You can use them together but they are not tied
 
 This very basic integration is done intentionally. Hazelcast is very feature rich and it belongs to other upcomings plugins to extend Play in a particular way by using this very simple plugin if needed.
 
-Moreover this upcoming services should use the [**Hazelcast-client library**](http://mvnrepository.com/artifact/com.hazelcast/hazelcast-client/2.6.3) in order to be able to interact with any Hazelcast cluster (not only the one tied to play). 
+Moreover this upcoming services should use the [**Hazelcast-client library**](http://mvnrepository.com/artifact/com.hazelcast/hazelcast-client/2.6.6) in order to be able to interact with any Hazelcast cluster (not only the one tied to play). 
 
 Imagine you want to write an open source monitoring tool for Hazelcast with play framework* It would be nice to monitor any Hazelcast cluster not only the one your app creates 
 
 
- **(there's a monitoring tool provided for free but limited to 2 instances without subscribtion fee and it's a war so you'll need a container)*
+   *(there's a monitoring tool provided for free but limited to 2 instances without subscribtion fee and it's a war so you'll need a container)*
 
 
 Consider using this plugin for :
@@ -61,10 +61,10 @@ Consider using this plugin for :
 * **simple cluster management** (make your play app cluster aware)
 * **share and sync data between all machines in your cluster** (in a replicated, fail-safe and **observable** way)
 * **cluster based scheduler** (coming soon stay tuned...)
-* cluster wide cache replacement for ehcache ([memcached interface](http://www.hazelcast.com/docs/2.5/manual/multi_html/ch15s02.html)) or using **[playHazelCache plugin](https://github.com/fmasion/playHazelCache)**
-* distributed ORM 2nd level cache ([could fit especially well with hibernate](http://www.hazelcast.com/docs/2.5/manual/multi_html/ch13.html))
-* in memory [grid computation](http://www.hazelcast.com/docs/2.5/manual/multi_html/ch09.html) (making wrappers on executors to enable a cluster wide monadic way to express fuctionnal operation…would be cool)
-* easy cluster wide [pub/sub](http://www.hazelcast.com/docs/2.5/manual/multi_html/ch02s02.html) (despite there's some nice tools already in play)
+* cluster wide cache replacement for ehcache ([memcached interface](http://www.hazelcast.com/docs/2.6/manual/multi_html/ch15s02.html)) or using **[playHazelCache plugin](https://github.com/fmasion/playHazelCache)**
+* distributed ORM 2nd level cache ([could fit especially well with hibernate](http://www.hazelcast.com/docs/2.6/manual/multi_html/ch13.html))
+* in memory [grid computation](http://www.hazelcast.com/docs/2.6/manual/multi_html/ch09.html) (making wrappers on executors to enable a cluster wide monadic way to express fuctionnal operation…would be cool)
+* easy cluster wide [pub/sub](http://www.hazelcast.com/docs/2.6/manual/multi_html/ch02s02.html) (despite there's some nice tools already in play)
 * [much more up to you…](http://lmgtfy.com/?q=buzz+lightyear+%22to%2Binfinity%2Band%2Bbeyond%22)
 
 I don't encourage you to build statefull apps, but they're some use cases where you need your data be accessible from every some/machine in the cluster. With Hazelcast you **may not** need to deploy a specific middleware (memcached, redis, Hbase, Infinyspan …) that can certainly do much more than you'll need.
@@ -88,10 +88,10 @@ add this resolver (same for both plugins) :
 
 choose your dependency :
 
-	"playHazelcast"  % "playHazelcast_2.10" % "0.2.0"
+	"playHazelcast"  % "playHazelcast_2.10" % "2.6.6"
 and / or 
 
-	"playHazelcastClient"  % "playHazelcastClient_2.10" % "0.2.0"
+	"playHazelcastClient"  % "playHazelcastClient_2.10" % "2.6.6"
 
 
 In your application, add to `conf/play.plugins` (or create the file if it dosn't exist) this configuration :

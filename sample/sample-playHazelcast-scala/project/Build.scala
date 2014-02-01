@@ -9,14 +9,13 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     // Add your project dependencies here,
-    "playhazelcast"  % "playhazelcast_2.10" % "0.2.0",
-    "playhazelcastclient"  % "playhazelcastclient_2.10" % "0.2.0"
+    "playhazelcast"  % "playhazelcast_2.10" % "2.6.6",
+    "playhazelcastclient"  % "playhazelcastclient_2.10" % "2.6.6"
   )
 
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
     // Add your own project settings here      
-    //resolvers += "Local Play Repository" at "file://Users/fred/Developpement/play-2.1.1/repository/local"  
     resolvers += Resolver.url("Fred's GitHub Play Repository", url("http://fmasion.github.com/releases/"))(Resolver.ivyStylePatterns)
   )
 
