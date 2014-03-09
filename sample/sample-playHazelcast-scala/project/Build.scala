@@ -9,8 +9,8 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     // Add your project dependencies here,
-    "playhazelcast"  % "playhazelcast_2.10" % "2.6.6",
-    "playhazelcastclient"  % "playhazelcastclient_2.10" % "2.6.6"
+    "playhazelcast"  % "playhazelcast_2.10" % "2.6.7",
+    "playhazelcastclient"  % "playhazelcastclient_2.10" % "2.6.7"
   )
 
 
