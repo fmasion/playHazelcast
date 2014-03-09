@@ -3,14 +3,14 @@ PlayHazelcast
 
 playframework 2.2.x hazelcast integration plugin
 
-# HazelCast 2.6.6 Plugin for Play 2.2.x
+# HazelCast 2.6.7 Plugin for Play 2.2.x
 
 This is a set **of 2 plugins** that provide basic [Hazelcast](http://http://www.hazelcast.com/)  integration in Play!.
 
 * **HazelcastPlugin**
 * **HazelcastClientPlugin**
 
-It is packaged with Hazelcast 2.6.6 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
+It is packaged with Hazelcast 2.6.7 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
 
 
 # Features
@@ -88,10 +88,10 @@ add this resolver (same for both plugins) :
 
 choose your dependency :
 
-	"playHazelcast"  % "playHazelcast_2.10" % "2.6.6"
+	"playHazelcast"  % "playHazelcast_2.10" % "2.6.7"
 and / or 
 
-	"playHazelcastClient"  % "playHazelcastClient_2.10" % "2.6.6"
+	"playHazelcastClient"  % "playHazelcastClient_2.10" % "2.6.7"
 
 
 In your application, add to `conf/play.plugins` (or create the file if it dosn't exist) this configuration :
