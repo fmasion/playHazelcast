@@ -3,14 +3,14 @@ PlayHazelcast
 
 playframework 2.2.x hazelcast integration plugin
 
-# HazelCast 2.6.7 Plugin for Play 2.2.x
+# HazelCast 3.2 Plugin for Play 2.2.x
 
 This is a set **of 2 plugins** that provide basic [Hazelcast](http://http://www.hazelcast.com/)  integration in Play!.
 
 * **HazelcastPlugin**
 * **HazelcastClientPlugin**
 
-It is packaged with Hazelcast 2.6.7 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
+It is packaged with Hazelcast 3.2 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
 
 
 # Features
@@ -61,10 +61,10 @@ Consider using this plugin for :
 * **simple cluster management** (make your play app cluster aware)
 * **share and sync data between all machines in your cluster** (in a replicated, fail-safe and **observable** way)
 * **cluster based scheduler** (coming soon stay tuned...)
-* cluster wide cache replacement for ehcache ([memcached interface](http://www.hazelcast.com/docs/2.6/manual/multi_html/ch15s02.html)) or using **[playHazelCache plugin](https://github.com/fmasion/playHazelCache)**
-* distributed ORM 2nd level cache ([could fit especially well with hibernate](http://www.hazelcast.com/docs/2.6/manual/multi_html/ch13.html))
-* in memory [grid computation](http://www.hazelcast.com/docs/2.6/manual/multi_html/ch09.html) (making wrappers on executors to enable a cluster wide monadic way to express fuctionnal operation…would be cool)
-* easy cluster wide [pub/sub](http://www.hazelcast.com/docs/2.6/manual/multi_html/ch02s02.html) (despite there's some nice tools already in play)
+* cluster wide cache replacement for ehcache ([memcached interface](http://www.hazelcast.org/docs/latest/manual/html-single/hazelcast-documentation.html#memcache-client)) or using **[playHazelCache plugin](https://github.com/fmasion/playHazelCache)**
+* distributed ORM 2nd level cache ([could fit especially well with hibernate](http://www.hazelcast.org/docs/latest/manual/html-single/hazelcast-documentation.html#hibernate-second-level-cache))
+* in memory [grid computation](http://www.hazelcast.org/docs/latest/manual/html-single/hazelcast-documentation.html#distributed-computing) (making wrappers on executors to enable a cluster wide monadic way to express fuctionnal operation…would be cool)
+* easy cluster wide [pub/sub](http://www.hazelcast.org/docs/latest/manual/html-single/hazelcast-documentation.html#topic) (despite there's some nice tools already in play)
 * [much more up to you…](http://lmgtfy.com/?q=buzz+lightyear+%22to%2Binfinity%2Band%2Bbeyond%22)
 
 I don't encourage you to build statefull apps, but they're some use cases where you need your data be accessible from every some/machine in the cluster. With Hazelcast you **may not** need to deploy a specific middleware (memcached, redis, Hbase, Infinyspan …) that can certainly do much more than you'll need.
@@ -88,10 +88,10 @@ add this resolver (same for both plugins) :
 
 choose your dependency :
 
-	"playHazelcast"  % "playHazelcast_2.10" % "2.6.7"
+	"playHazelcast"  % "playHazelcast_2.10" % "3.2.1"
 and / or 
 
-	"playHazelcastClient"  % "playHazelcastClient_2.10" % "2.6.7"
+	"playHazelcastClient"  % "playHazelcastClient_2.10" % "3.2.1"
 
 
 In your application, add to `conf/play.plugins` (or create the file if it dosn't exist) this configuration :

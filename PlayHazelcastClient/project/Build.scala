@@ -5,11 +5,11 @@ import play.Project._
 object ApplicationBuild extends Build {
 
   val appName         = "playHazelcastClient"
-  val appVersion      = "2.6.7"
+  val appVersion      = "3.2.1"
 
   val appDependencies = Seq(
-    "com.hazelcast" % "hazelcast-client" % "2.6.7",
-    "com.hazelcast" % "hazelcast-cloud" % "2.6.7"
+    "com.hazelcast" % "hazelcast-client" % "3.2.1",
+    "com.hazelcast" % "hazelcast-cloud" % "3.2.1"
   )
 
 
