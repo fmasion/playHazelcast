@@ -1,9 +1,9 @@
 PlayHazelcast
 =============
 
-playframework 2.2.x hazelcast integration plugin
+playframework 2.3.x hazelcast integration plugin
 
-# HazelCast 3.2 Plugin for Play 2.2.x
+# HazelCast 3.2 Plugin for Play 2.3.x
 
 This is a set **of 2 plugins** that provide basic [Hazelcast](http://http://www.hazelcast.com/)  integration in Play!.
 
