@@ -12,7 +12,9 @@ libraryDependencies ++= Seq(
     "com.hazelcast" % "hazelcast-cloud" % "3.2.1"
 )
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+play.Project.playScalaSettings
+
+
 
 scalacOptions ++= Seq("-deprecation","-feature")
 

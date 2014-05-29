@@ -3,14 +3,16 @@ PlayHazelcast
 
 playframework 2.3.x hazelcast integration plugin
 
-# HazelCast 3.2 Plugin for Play 2.3.x
+# HazelCast 3.2.1 Plugin for Play 2.2.3
+
+For Play 2.3.RC2 see in branch play2.3.x
 
 This is a set **of 2 plugins** that provide basic [Hazelcast](http://http://www.hazelcast.com/)  integration in Play!.
 
 * **HazelcastPlugin**
 * **HazelcastClientPlugin**
 
-It is packaged with Hazelcast 3.2 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
+It is packaged with Hazelcast 3.2.1 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
 
 
 # Features
