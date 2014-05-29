@@ -12,7 +12,7 @@ In the first one :
 	
 In the second one : 
 
-	> play run -Dhz.port=5701 9001
+	> play "run -Dhz.port=5701 -Dhttp.port=9001”
 
 go to your browser at the following URLs :
 

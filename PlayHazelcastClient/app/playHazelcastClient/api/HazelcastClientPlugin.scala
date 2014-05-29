@@ -2,9 +2,11 @@ package playHazelcastClient.api
 
 
 import play.api.Plugin
-import com.hazelcast.client.{ClientConfig, HazelcastClient}
+import com.hazelcast.client.HazelcastClient
+import com.hazelcast.client.config.ClientConfig
 import play.api.Play
 import play.api.Logger
+import com.hazelcast.core.HazelcastInstance
 
 class HazelcastClientPlugin(app: play.api.Application) extends Plugin {
   val log = Logger("HazelcastClientPlugin")
@@ -41,11 +43,11 @@ class HazelcastClientPlugin(app: play.api.Application) extends Plugin {
 
 object PlayHzClient {
   
-  private[this] var instance: Option[HazelcastClient] = None
+  private[this] var instance: Option[HazelcastInstance] = None
   
   private[api] def stop = instance foreach(_.getLifecycleService().shutdown())
 
-  private[api] def start(config:ClientConfig) = {
+  private[api] def start(config: ClientConfig) = {
 	  instance = Option(HazelcastClient.newHazelcastClient(config))
   }
   
