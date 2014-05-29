@@ -35,7 +35,7 @@ class HazelcastClientPlugin(app: play.api.Application) extends Plugin {
       case None       => DEFAULT_HOST
     }
 
-    adresses.foreach(config.addAddress(_))
+    adresses.foreach(config.getNetworkConfig().addAddress(_))
     config
   }
  
