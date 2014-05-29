@@ -3,7 +3,9 @@ PlayHazelcast
 
 playframework 2.3.x hazelcast integration plugin
 
-# HazelCast 3.2 Plugin for Play 2.3.x
+# HazelCast 3.2.1 Plugin for Play 2.3.x
+
+For play 2.2.x see in play2.2.x branch
 
 This is a set **of 2 plugins** that provide basic [Hazelcast](http://http://www.hazelcast.com/)  integration in Play!.
 
@@ -82,9 +84,9 @@ In your application, add this configuration to the `project/Build.scala` file :
 
 add this resolver (same for both plugins) :
 
-	resolvers += Resolver.url("Fred's GitHub Play Repository", url("http://fmasion.github.com/releases/"))(Resolver.ivyStylePatterns)
+	resolvers += Resolver.url("Fred's GitHub Play Repository", url("http://fmasion.github.com/releases23x/"))(Resolver.ivyStylePatterns)
 
-
+`for play 2.2.x use : "http://fmasion.github.com/releases/"`
 
 choose your dependency :
 

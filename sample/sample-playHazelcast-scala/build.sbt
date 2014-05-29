@@ -10,7 +10,9 @@ resolvers += Resolver.sonatypeRepo("snapshots")
 
 resolvers += Resolver.sonatypeRepo("releases")
 
-resolvers += Resolver.file("Local repo", file(System.getProperty("user.home") + "/.ivy2/local"))(Resolver.ivyStylePatterns)
+//resolvers += Resolver.file("Local repo", file(System.getProperty("user.home") + "/.ivy2/local"))(Resolver.ivyStylePatterns)
+resolvers += Resolver.url("Fred's GitHub Play Repository", url("http://fmasion.github.com/releases23x/"))(Resolver.ivyStylePatterns)
+
 
 libraryDependencies ++= Seq(
     // Add your project dependencies here,
