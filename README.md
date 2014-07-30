@@ -3,7 +3,7 @@ PlayHazelcast
 
 playframework 2.3.x hazelcast integration plugin
 
-# HazelCast 3.2.1 Plugin for Play 2.2.3
+# HazelCast 3.2.3 Plugin for Play 2.2.3
 
 For Play 2.3.RC2 see in branch play2.3.x
 
@@ -12,7 +12,7 @@ This is a set **of 2 plugins** that provide basic [Hazelcast](http://http://www.
 * **HazelcastPlugin**
 * **HazelcastClientPlugin**
 
-It is packaged with Hazelcast 3.2.1 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
+It is packaged with Hazelcast 3.2.3 community edition [licenced under Apache 2 licence](http://www.hazelcast.com/downloads.jsp)
 
 
 # Features
@@ -84,16 +84,17 @@ In your application, add this configuration to the `project/Build.scala` file :
 
 add this resolver (same for both plugins) :
 
-	resolvers += Resolver.url("Fred's GitHub Play Repository", url("http://fmasion.github.com/releases/"))(Resolver.ivyStylePatterns)
+	resolvers += "bintray" at "http://dl.bintray.com/fmasion/maven"
 
 
 
 choose your dependency :
 
-	"playHazelcast"  % "playHazelcast_2.10" % "3.2.1"
+	    "playhazelcast"  % "playhazelcast_2.10" % "3.2.3-play2.2",
+    
 and / or 
 
-	"playHazelcastClient"  % "playHazelcastClient_2.10" % "3.2.1"
+	"playhazelcastclient"  % "playhazelcastclient_2.10" % "3.2.3-play2.2"
 
 
 In your application, add to `conf/play.plugins` (or create the file if it dosn't exist) this configuration :
