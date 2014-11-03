@@ -9,7 +9,7 @@ import play.api.Logger
 import com.hazelcast.core.HazelcastInstance
 
 class HazelcastClientPlugin(app: play.api.Application) extends Plugin {
-  val log = Logger("HazelcastClientPlugin")
+  val log = Logger("playHazelcastClient.api.HazelcastClientPlugin")
   val DEFAULT_HOST = List("127.0.0.1:5701")
   
   override def onStart() {
@@ -19,7 +19,7 @@ class HazelcastClientPlugin(app: play.api.Application) extends Plugin {
   
   override def onStop() {
 	PlayHzClient.stop
-	log.error("Hazelcast Client Stopped")
+	log.info("Hazelcast Client Stopped")
   }
   
   

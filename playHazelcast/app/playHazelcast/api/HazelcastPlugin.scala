@@ -7,7 +7,8 @@ import play.api.Play
 import play.api.Logger
 
 class HazelcastPlugin(app: play.api.Application) extends Plugin {
-  val log = Logger("HazelcastPlugin")
+  val log = Logger("playHazelcast.api.HazelcastPlugin")
+
   override def onStart() {
     log.info("Starting Hazelcast")
     val config = getConfig
@@ -39,7 +40,7 @@ class HazelcastPlugin(app: play.api.Application) extends Plugin {
   
   override def onStop() {
 	PlayHz.stop
-	log.error("Hazelcast Stopped")
+	log.info("Hazelcast Stopped")
   }
   
   private[this] def getConfig:Config = {
