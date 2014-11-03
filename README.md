@@ -3,7 +3,7 @@ PlayHazelcast
 
 playframework 2.3.x hazelcast integration plugin
 
-# HazelCast 3.2.3 Plugin for Play 2.2.3
+# HazelCast 3.2.3 Plugin for Play 2.3.x
 
 For play 2.2.x see in play2.2.x branch
 
@@ -90,11 +90,11 @@ add this resolver (same for both plugins) :
 
 choose your dependency :
 
-	    "playhazelcast"  % "playhazelcast_2.10" % "3.2.3-play2.2",
+	    "playhazelcast"  % "playhazelcast_2.10" % "3.2.3-play2.3",
     
 and / or 
 
-	"playhazelcastclient"  % "playhazelcastclient_2.10" % "3.2.3-play2.2"
+	"playhazelcastclient"  % "playhazelcastclient_2.10" % "3.2.3-play2.3"
 
 
 In your application, add to `conf/play.plugins` (or create the file if it dosn't exist) this configuration :
